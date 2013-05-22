@@ -2,7 +2,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.bonitasoft.tomcat</groupId>
-	<artifactId>bonita-h2-listener</artifactId>
+	<artifactId>bonita-tomcat-h2-listener</artifactId>
 	<version>1.0.1-SNAPSHOT</version>
 
 	<scm>
