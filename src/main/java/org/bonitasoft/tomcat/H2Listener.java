@@ -15,9 +15,11 @@ public class H2Listener implements LifecycleListener {
 
     
     private final static Logger log = Logger.getLogger(H2Listener.class.getName());
-    
+
     private Server h2Server;
 
+    private boolean start = true;
+    
     private boolean trace;
     
     private Integer tcpPort;
@@ -32,12 +34,38 @@ public class H2Listener implements LifecycleListener {
 
     private Integer webPort;
     
-    private boolean start = true;
+    public void setStart(boolean start) {
+        this.start = start;
+    }
+    
+    public void setTrace(boolean trace) {
+        this.trace = trace;
+    }
     
     public void setTcpPort(Integer tcpPort) {
         this.tcpPort = tcpPort;
     }
     
+    public void setTcpAllowOthers(boolean tcpAllowOthers) {
+        this.tcpAllowOthers = tcpAllowOthers;
+    }
+    
+    public void setBaseDir(String baseDir) {
+        this.baseDir = baseDir;
+    }
+
+    public void setIfExists(boolean ifExists) {
+        this.ifExists = ifExists;
+    }
+    
+    public void setWeb(boolean web) {
+        this.web = web;
+    }
+    
+    public void setWebPort(Integer webPort) {
+        this.webPort = webPort;
+    }
+
     @Override
     public void lifecycleEvent(LifecycleEvent event) {
         
@@ -80,7 +108,7 @@ public class H2Listener implements LifecycleListener {
             h2Args.add("-tcpAllowOthers");
         }
 
-        if (baseDir != null) {
+        if (baseDir != null && !baseDir.isEmpty()) {
             h2Args.add("-baseDir");
             h2Args.add(baseDir);
         }
