@@ -10,6 +10,17 @@
 		<developerConnection>scm:svn:https://rd.svn.bonitasoft.org/bonita-web/tooling/bonita-tomcat-h2-listener/trunk</developerConnection>
 	</scm>
 
+    <organization>
+        <name>BonitaSoft</name>
+        <url>http://www.bonitasoft.org</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>GNU Lesser General Public License Version 2.1</name>
+            <url>http://www.gnu.org/licenses/lgpl.html</url>
+        </license>
+    </licenses>
 
 	<dependencies>
 		<dependency>
